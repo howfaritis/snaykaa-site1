@@ -1,0 +1,1 @@
+export default function About(){return (<div className="container"><h1>About</h1><p>SNAYKAA focuses on a precise two‑step routine: serum + cream. Minimal steps, maximum impact.</p></div>)}

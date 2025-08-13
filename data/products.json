@@ -1,0 +1,56 @@
+{
+  "items": [
+    {
+      "slug": "serum",
+      "name": "H\u2082OSKIN All\u2011In Venom Face Serum",
+      "short": "5\u2011in\u20111 serum for all skin types. Brightening, firming, hydrating.",
+      "amazon": "https://www.amazon.com/SNAKEEYES",
+      "badges": [
+        "Vegan",
+        "Cruelty\u2011Free",
+        "Made in USA"
+      ],
+      "ingredients": [
+        "Niacinamide",
+        "Hyaluronic Acid",
+        "Vitamin C",
+        "Peptides",
+        "Collagen Support"
+      ],
+      "howto": [
+        "Cleanse and dry face.",
+        "Apply 2\u20133 drops and massage upward.",
+        "Follow with SNAYKAA Cream."
+      ],
+      "media": {
+        "images": [
+          "/logo.png"
+        ]
+      }
+    },
+    {
+      "slug": "cream",
+      "name": "H\u2082OSKIN Face Cream",
+      "short": "Rich hydration with a dewy finish.",
+      "amazon": "https://www.amazon.com/SNAKEEYES",
+      "badges": [
+        "Dermatologist\u2011tested",
+        "Non\u2011comedogenic"
+      ],
+      "ingredients": [
+        "Squalane",
+        "Ceramides",
+        "Glycerin"
+      ],
+      "howto": [
+        "After serum, massage pea\u2011size amount.",
+        "Use AM/PM."
+      ],
+      "media": {
+        "images": [
+          "/logo.png"
+        ]
+      }
+    }
+  ]
+}
