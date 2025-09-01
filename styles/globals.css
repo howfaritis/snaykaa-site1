@@ -1,83 +1,32 @@
-/* ---------- HEADER STYLING ---------- */
-
-.site-header {
-  background: #E9E5D3; /* cream background */
-  border-bottom: 2px solid #3F2A56;
-  padding: 0.75rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+:root{
+  --ink:#3F2A56;         /* deep plum (your brand) */
+  --cream:#E9E5D3;       /* nude background */
+  --ink-80:#5a4478;
+  --border:#eae7de;
 }
 
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+html,body{background:var(--cream); color:#2a2a2a;}
+.container{max-width:1160px; margin:0 auto; padding:0 20px;}
 
-/* Brand (Logo + Text) */
-.brand {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
+.site-header{position:sticky; top:0; z-index:40; background:#fff; border-bottom:1px solid var(--border);}
+.header-inner{display:flex; align-items:center; justify-content:space-between; height:76px;}
 
-.brand-mark {
-  height: 40px;
-  width: auto;
-  margin-right: 10px;
-}
+.brand{display:flex; gap:14px; align-items:center; text-decoration:none;}
+.brand-mark{width:44px; height:44px; object-fit:contain;}
+.brand-name{font-weight:800; letter-spacing:.04em; color:var(--ink);}
+.brand-tag{font-size:12px; color:#6b6b6b;}
 
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
-}
+.nav{display:flex; gap:28px; align-items:center;}
+.nav-link{color:#222; text-decoration:none; font-weight:600;}
+.nav-link:hover{color:var(--ink-80);}
+.btn{background:var(--ink); color:#fff!important; padding:10px 16px; border-radius:12px;}
+.btn:hover{filter:brightness(.92);}
 
-.brand-name {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #3F2A56;
-  letter-spacing: 0.5px;
-}
-
-.brand-tag {
-  font-size: 0.8rem;
-  font-weight: 400;
-  color: #555;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* Navigation */
-.nav {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.nav-link {
-  text-decoration: none;
-  font-weight: 500;
-  color: #3F2A56;
-  transition: all 0.3s ease;
-}
-
-.nav-link:hover {
-  color: #000;
-}
-
-/* Contact button highlight */
-.nav-link.btn {
-  padding: 0.4rem 1rem;
-  border-radius: 20px;
-  background: #3F2A56;
-  color: #E9E5D3 !important;
-  font-weight: 600;
-  transition: background 0.3s ease;
-}
-
-.nav-link.btn:hover {
-  background: #2A1D3F;
-}
+.page-main{padding:32px 0;}
+/* roomy product sections */
+.section{padding:48px 0; border-top:1px solid var(--border);}
+.section h2{font-size:28px; margin:0 0 14px; color:var(--ink);}
+.section p{line-height:1.7; margin:8px 0;}
+.grid{display:grid; gap:28px;}
+.grid-2{grid-template-columns:1.1fr .9fr;}
+@media (max-width:920px){ .grid-2{grid-template-columns:1fr;} .site-header{position:relative;} }
