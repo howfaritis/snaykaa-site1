@@ -1,7 +1,7 @@
 ---
 title: "Top 5 Benefits of Niacinamide & Peptides in Skincare"
 date: "2025-09-01"
-image: "/blog/niacinamide.jpg"
+image: /images/blog/niacinamide.jpg
 excerpt: "Two powerhouse ingredients — Niacinamide and Peptides — transform your skin by boosting radiance, reducing wrinkles, and strengthening the barrier."
 ---
 
