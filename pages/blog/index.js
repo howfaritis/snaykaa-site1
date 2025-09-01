@@ -2,10 +2,18 @@
 import fs from 'fs';
 import path from 'path';
 
+function resolveBlogDir() {
+  const preferred = path.join(process.cwd(), 'data', 'blog');
+  if (fs.existsSync(preferred)) return preferred;
+  return path.join(process.cwd(), 'blog');
+}
+
 export async function getStaticProps() {
-  const blogJsonPath = path.join(process.cwd(), 'data', 'blog', 'blog.json');
+  const blogDir = resolveBlogDir();
+  const blogJsonPath = path.join(blogDir, 'blog.json');
   const posts = JSON.parse(fs.readFileSync(blogJsonPath, 'utf8'))
     .sort((a, b) => new Date(b.date) - new Date(a.date));
+
   return { props: { posts } };
 }
 
