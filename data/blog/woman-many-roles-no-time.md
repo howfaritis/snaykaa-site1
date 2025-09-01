@@ -1,7 +1,8 @@
 ---
 title: "A Woman of Many Roles: Finding Time for Herself"
 date: "2025-09-01"
-image: "/blog/woman.jpg"
+image: /blog/woman.jpg
+
 excerpt: "Modern women balance careers, family, and endless expectations — but where is the time for self-care?"
 ---
 
