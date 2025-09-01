@@ -1,32 +1,158 @@
-:root{
-  --ink:#3F2A56;         /* deep plum (your brand) */
-  --cream:#E9E5D3;       /* nude background */
-  --ink-80:#5a4478;
-  --border:#eae7de;
+/* ---------- HEADER (desktop base) ---------- */
+.site-header {
+  background: #E9E5D3;
+  border-bottom: 2px solid #3F2A56;
+  padding: 0.75rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-html,body{background:var(--cream); color:#2a2a2a;}
-.container{max-width:1160px; margin:0 auto; padding:0 20px;}
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 1rem;
+}
 
-.site-header{position:sticky; top:0; z-index:40; background:#fff; border-bottom:1px solid var(--border);}
-.header-inner{display:flex; align-items:center; justify-content:space-between; height:76px;}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
 
-.brand{display:flex; gap:14px; align-items:center; text-decoration:none;}
-.brand-mark{width:44px; height:44px; object-fit:contain;}
-.brand-name{font-weight:800; letter-spacing:.04em; color:var(--ink);}
-.brand-tag{font-size:12px; color:#6b6b6b;}
+.brand-mark {
+  height: 40px;
+  width: auto;
+  margin-right: 10px;
+}
 
-.nav{display:flex; gap:28px; align-items:center;}
-.nav-link{color:#222; text-decoration:none; font-weight:600;}
-.nav-link:hover{color:var(--ink-80);}
-.btn{background:var(--ink); color:#fff!important; padding:10px 16px; border-radius:12px;}
-.btn:hover{filter:brightness(.92);}
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
 
-.page-main{padding:32px 0;}
-/* roomy product sections */
-.section{padding:48px 0; border-top:1px solid var(--border);}
-.section h2{font-size:28px; margin:0 0 14px; color:var(--ink);}
-.section p{line-height:1.7; margin:8px 0;}
-.grid{display:grid; gap:28px;}
-.grid-2{grid-template-columns:1.1fr .9fr;}
-@media (max-width:920px){ .grid-2{grid-template-columns:1fr;} .site-header{position:relative;} }
+.brand-name {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #3F2A56;
+  letter-spacing: 0.4px;
+}
+
+.brand-tag {
+  font-size: 0.75rem;
+  color: #5b5560;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* nav (desktop) */
+.nav {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.nav-link {
+  color: #3F2A56;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  transition: color .2s ease;
+}
+
+.nav-link:hover { color: #1b1430; }
+
+.nav-link.btn {
+  background: #3F2A56;
+  color: #E9E5D3 !important;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  border: 1px solid #3F2A56;
+}
+.nav-link.btn:hover { background: #2A1D3F; }
+
+/* ---------- MOBILE ---------- */
+.menu-button {
+  display: none;            /* hidden on desktop */
+  background: transparent;
+  border: 0;
+  padding: .35rem;
+  margin-left: auto;
+}
+
+/* simple hamburger */
+.menu-icon,
+.menu-icon::before,
+.menu-icon::after {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #3F2A56;
+  position: relative;
+  border-radius: 2px;
+}
+.menu-icon::before,
+.menu-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.menu-icon::before { top: -7px; }
+.menu-icon::after  { top: 7px; }
+
+/* breakpoints */
+@media (max-width: 960px) {
+  .brand-name { font-size: 1.15rem; }
+  .brand-mark { height: 36px; }
+}
+
+@media (max-width: 760px) {
+  .header-inner {
+    grid-template-columns: 1fr auto; /* brand | burger */
+  }
+
+  .menu-button { display: inline-flex; }
+
+  /* collapse nav by default on mobile */
+  .nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 64px;               /* ~ header height */
+    background: #E9E5D3;
+    border-bottom: 2px solid #3F2A56;
+    display: grid;
+    gap: 0;
+    padding: 0.5rem 1rem 1rem;
+    transform: translateY(-110%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform .2s ease, opacity .2s ease;
+  }
+
+  .nav.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-link {
+    padding: 0.8rem 0.25rem;
+    border-top: 1px solid rgba(63,42,86,0.15);
+  }
+
+  .nav-link.btn {
+    margin-top: 0.5rem;
+    justify-self: start;
+  }
+}
+
+/* Improve tap targets */
+@media (pointer: coarse) {
+  .nav-link, .menu-button { -webkit-tap-highlight-color: transparent; }
+}
+
