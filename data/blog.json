@@ -1,16 +1,19 @@
-{
-  "slug": "woman-many-roles-no-time",
-  "title": "A Woman of Many Roles: Finding Time for Herself",
-  "date": "2025-08-13",
-  "excerpt": "Modern women balance careers, family, and endless expectations — but where is the time for self-care? SNAYKAA was created to fit into her daily life with luxury skincare made simple.",
-  "image": "/blog/woman.jpg",
-  "body": "Every woman wears many hats..."
-},
-{
-  "slug": "top-5-benefits-niacinamide-peptides",
-  "title": "Top 5 Benefits of Niacinamide & Peptides in Skincare",
-  "date": "2025-08-13",
-  "excerpt": "Two powerhouse ingredients — Niacinamide and Peptides — transform your skin by boosting radiance, reducing wrinkles, and strengthening the barrier.",
-  "image": "/blog/niacinamide.jpg",
-  "body": "When it comes to modern skincare..."
-}
+[
+  {
+    "slug": "woman-many-roles-no-time",
+    "title": "A Woman of Many Roles: Finding Time for Herself",
+    "date": "2025-09-01",
+    "image": "/blog/woman.jpg",
+    "excerpt": "Modern women balance careers, family, and endless expectations — where is the time for self-care?",
+    "bodyPath": "data/blog/woman-many-roles-no-time.md"
+  },
+  {
+    "slug": "top-5-benefits-niacinamide-peptides",
+    "title": "Top 5 Benefits of Niacinamide & Peptides in Skincare",
+    "date": "2025-09-01",
+    "image": "/blog/niacinamide.jpg",
+    "excerpt": "Two powerhouse ingredients deliver visible results in a simple, 2-step routine.",
+    "bodyPath": "data/blog/top-5-benefits-niacinamide-peptides.md"
+  }
+]
+
