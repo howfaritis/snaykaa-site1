@@ -1,56 +1,49 @@
-{
-  "items": [
-    {
-      "slug": "serum",
-      "name": "H\u2082OSKIN All\u2011In Venom Face Serum",
-      "short": "5\u2011in\u20111 serum for all skin types. Brightening, firming, hydrating.",
-      "amazon": "https://www.amazon.com/SNAKEEYES",
-      "badges": [
-        "Vegan",
-        "Cruelty\u2011Free",
-        "Made in USA"
-      ],
-      "ingredients": [
-        "Niacinamide",
-        "Hyaluronic Acid",
-        "Vitamin C",
-        "Peptides",
-        "Collagen Support"
-      ],
-      "howto": [
-        "Cleanse and dry face.",
-        "Apply 2\u20133 drops and massage upward.",
-        "Follow with SNAYKAA Cream."
-      ],
-      "media": {
-        "images": [
-          "/logo.png"
-        ]
-      }
-    },
-    {
-      "slug": "cream",
-      "name": "H\u2082OSKIN Face Cream",
-      "short": "Rich hydration with a dewy finish.",
-      "amazon": "https://www.amazon.com/SNAKEEYES",
-      "badges": [
-        "Dermatologist\u2011tested",
-        "Non\u2011comedogenic"
-      ],
-      "ingredients": [
-        "Squalane",
-        "Ceramides",
-        "Glycerin"
-      ],
-      "howto": [
-        "After serum, massage pea\u2011size amount.",
-        "Use AM/PM."
-      ],
-      "media": {
-        "images": [
-          "/logo.png"
-        ]
-      }
-    }
-  ]
-}
+[
+  {
+    "slug": "h2oskin-cream",
+    "name": "SNAYKAA™ ALL-IN VENOM Face Cream · H₂OSKIN",
+    "hero": "/hero.jpg",
+    "buyUrl": "https://amazon.com/snaykaa",
+    "short": "Rich, silky moisturizer: hydrates, firms, brightens and nourishes in a single step.",
+    "highlights": [
+      "Niacinamide minimizes pores & evens tone",
+      "Hyaluronic Acid floods skin with hydration",
+      "Peptides support collagen & elasticity",
+      "Panthenol calms and replenishes",
+      "Dermatologist-inspired, vegan, cruelty-free"
+    ],
+    "ingredientsKey": [
+      "Niacinamide (Vitamin B3)",
+      "Peptide Complex",
+      "Hyaluronic Acid",
+      "Panthenol (B5)",
+      "Antioxidants"
+    ],
+    "ingredientsFull": "Aqua (Water), Niacinamide, Glycerin, Sodium Hyaluronate, Panthenol, Peptide Blend, Mandelic Acid, Ascorbic Acid, MSM, Tocopherol, Carbomer, Amino Acids, Botanical Extracts, Phenoxyethanol, Ethylhexylglycerin.",
+    "gallery": ["/hero.jpg"]
+  },
+  {
+    "slug": "all-in-venom-serum",
+    "name": "SNAYKAA™ ALL-IN VENOM Face Serum · 5-in-1",
+    "hero": "/hero.jpg",
+    "buyUrl": "https://amazon.com/snaykaa",
+    "short": "Hydration, anti-aging, brightening, firming & nourishment—one serum for a timeless glow.",
+    "highlights": [
+      "Niacinamide + Mandelic Acid refine tone & texture",
+      "Hyaluronic Acid deeply hydrates and plumps",
+      "MSM + Vitamin C support repair & radiance",
+      "Collagen-support peptides firm and smooth",
+      "Lightweight, layers perfectly under makeup"
+    ],
+    "ingredientsKey": [
+      "Niacinamide",
+      "Mandelic Acid",
+      "Sodium Hyaluronate",
+      "MSM",
+      "Ascorbic Acid",
+      "Peptide Complex"
+    ],
+    "ingredientsFull": "Aqua (Water), Niacinamide, Mandelic Acid, Sodium Hyaluronate, Methylsulfonylmethane (MSM), Ascorbic Acid, Peptide Blend, Panthenol, Glycerin, Antioxidants, Botanical Extracts, Phenoxyethanol, Ethylhexylglycerin.",
+    "gallery": ["/hero.jpg"]
+  }
+]
