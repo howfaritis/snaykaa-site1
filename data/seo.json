@@ -1,20 +1,18 @@
 {
-  "siteUrl": "https://snaykaa.com",
-  "defaultTitle": "Luxury Skincare for the Fearless",
-  "defaultDescription": "SNAYKAA makes luxury skincare simple: a two-step system—H2OSKIN All-In Venom Face Serum & Face Cream—for hydration, brightening, firming and glow.",
+  "siteName": "SNAYKAA™",
+  "tagline": "ABSURDLY SHAMELESS",
+  "siteUrl": "https://snaykaa.com/",
+  "description": "Luxury skincare made simple. SNAYKAA’s All-In Venom 5-in-1 Face Serum and H₂OSKIN Face Cream deliver real results—firming, brightening, hydrating and smoothing—without a 10-step routine.",
   "keywords": [
     "Snaykaa",
     "H2OSKIN",
+    "All-In Venom",
     "luxury skincare",
-    "niacinamide serum",
-    "peptide cream",
-    "face serum",
-    "anti aging",
+    "peptide serum",
+    "niacinamide cream",
+    "anti-aging",
     "brightening",
     "hydrating",
-    "moisturizer",
-    "Made in USA",
-    "simple routine",
-    "ABSURDLY SHAMELESS"
+    "made in USA"
   ]
 }
