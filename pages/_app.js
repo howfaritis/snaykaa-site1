@@ -6,7 +6,7 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <>
       <Header />
-      <main className="page-wrap">
+      <main className="page-main">
         <Component {...pageProps} />
       </main>
       <Footer />
