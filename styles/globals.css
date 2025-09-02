@@ -1,3 +1,17 @@
+/* ==== Brand tokens ======================================================= */
+:root{
+  --ink:#3F2A56;            /* deep plum */
+  --ivory:#E9E5D3;          /* warm ivory */
+  --gold:#C9A44C;           /* accent */
+  --ink-90:#2A1D3F;
+  --ink-60:#5b5560;
+  --bg:#FFFDF8;
+}
+
+html,body{ background:var(--bg); color:var(--ink-90); }
+a{ color:var(--ink); }
+.btn{ background:var(--ink); color:var(--ivory); border:1px solid var(--ink); border-radius:999px; padding:.5rem .9rem; }
+.btn-outline{ background:transparent; color:var(--ink); border:1px solid var(--ink); }
 /* ---------- HEADER (desktop base) ---------- */
 .site-header {
   background: #E9E5D3;
@@ -156,29 +170,30 @@
   .nav-link, .menu-button { -webkit-tap-highlight-color: transparent; }
 }
 
-/* ---------- FOOTER ---------- */
+/* === Footer =============================================================== */
 .site-footer{
-  background:#fff;
-  border-top:1px solid #eae7de;
-  padding:16px 20px;
+  background:var(--ivory);
+  border-top:2px solid var(--ink);
+  padding:1rem;
 }
 .footer-inner{
-  max-width:1200px;
-  margin:0 auto;
-  display:flex;
-  gap:16px;
-  align-items:center;
-  justify-content:space-between;
-  flex-wrap:wrap;
+  max-width:1200px; margin:0 auto; display:grid; gap:.75rem;
+  grid-template-columns: 1fr auto; align-items:center;
 }
-.footer-left{ margin:0; color:#3F2A56; font-weight:700; letter-spacing:.02em; }
-.footer-right{ margin:0; display:flex; flex-wrap:wrap; gap:10px; align-items:center; }
-.footer-right a{ color:#3F2A56; text-decoration:none; font-weight:600; }
-.footer-right a:hover{ text-decoration:underline; }
-.footer-right .dot{ opacity:.4; }
-.contact-section {
-  margin: 1.5rem 0;
-}
+.footer-left{ font-size:.9rem; }
+.footer-links{ display:flex; flex-wrap:wrap; gap:.9rem; align-items:center; }
+.footer-links a{ text-decoration:none; font-weight:600; color:var(--ink); }
+.footer-social{ display:flex; gap:.9rem; align-items:center; }
+.footer-social a{ line-height:0; display:inline-flex; align-items:center; gap:.35rem; }
+.footer-social svg{ width:20px; height:20px; fill:var(--ink); }
+
+/* cards/sections spacing */
+.section{ padding:3.5rem 1rem; }
+.container{ max-width:1200px; margin:0 auto; }
+.card{ background:#fff; border:1px solid rgba(63,42,86,.12); border-radius:16px; padding:1rem; }
+.grid-2{ display:grid; gap:1.25rem; grid-template-columns:repeat(2,minmax(0,1fr)); }
+@media (max-width:900px){ .grid-2{ grid-template-columns:1fr; } }
+
 
 .contact-section h2 {
   font-size: 1.25rem;
