@@ -18,4 +18,13 @@
     "ABSURDLY SHAMELESS"
   ]
 }
+// at top of a page
+import SeoHead from "../components/SeoHead";
+
+// inside component return:
+<SeoHead
+  title="Contact"
+  description="Contact SNAYKAA — luxury skincare support, partnerships, and press."
+  keywords={["Snaykaa","luxury skincare","customer support","H2OSKIN","serum","cream"]}
+/>
 
