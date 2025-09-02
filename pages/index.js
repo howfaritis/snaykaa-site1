@@ -1,64 +1,49 @@
+import Link from "next/link";
+import SeoHead from "../components/SeoHead";
+
 export default function Home() {
   return (
     <>
-      <header>
-        <div
-          className="container"
-          style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
-        >
-          <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-            <img src="/logo.png" alt="SNAYKAA" width="44" height="44" />
-            <b>SNAYKAA</b>
-            <span style={{ opacity: 0.7, marginLeft: 8 }}>ABSURDLY SHAMELESS</span>
-          </div>
-          <nav style={{ display: 'flex', gap: 16, alignItems: 'center' }}>
-            <a href="/shop">Shop</a>
-            <a href="/about">About</a>
-            <a href="/blog">Blog</a>
-            <a className="btn" href="/contact">Contact</a>
-          </nav>
-        </div>
-      </header>
+      <SeoHead
+        title="Luxury Skincare, Simplified"
+        description="Two products. Endless compliments. All-In Venom Serum + H₂OSKIN Cream deliver firming, brightening, hydrating results without a 10-step routine."
+        image="/blog-glow.jpg"
+        keywords={["serum","cream","peptides","niacinamide","luxury skincare"]}
+      />
 
-      <main className="container">
-        <section className="grid grid-2">
-          <div>
-            <h1 style={{ fontSize: 42, lineHeight: 1.1 }}>
-              Luxury skincare for the fearless.
-            </h1>
-            <p style={{ marginTop: 12 }}>
-              Two products. Endless compliments. Meet H₂OSKIN — our all‑in serum and cream
-              designed to hydrate, brighten, and firm.
-            </p>
-            <div style={{ display: 'flex', gap: 12, marginTop: 16 }}>
-              <a className="btn" href="/shop">Shop Now</a>
-              <a className="btn" href="https://www.amazon.com/SNAKEEYES" target="_blank" rel="noreferrer">
-                Buy on Amazon
-              </a>
+      <section className="hero">
+        <div className="hero-inner">
+          <div className="hero-copy">
+            <h1>Luxury skincare for the fearless.</h1>
+            <p>Meet <strong>All-In Venom 5-in-1 Serum</strong> and <strong>H₂OSKIN Face Cream</strong> — real results in one step.</p>
+            <div className="cta-row">
+              <Link className="btn-primary" href="/shop">Shop on Amazon</Link>
+              <Link className="btn-link" href="/about">About Us</Link>
             </div>
           </div>
-
-          <div className="card">
-            <img src="/hero.jpg" alt="SNAYKAA products" style={{ width: '100%', borderRadius: 12 }} />
-          </div>
-        </section>
-      </main>
-
-      <footer>
-        <div
-          className="container"
-          style={{ display: 'flex', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap' }}
-        >
-          <small>© {new Date().getFullYear()} SNAYKAA</small>
-          <div style={{ display: 'flex', gap: 16, alignItems: 'center' }}>
-            <a href="https://www.tiktok.com/@snaykaa" target="_blank" rel="noreferrer">TikTok</a>
-            <a href="https://www.instagram.com/the_snaykaa/" target="_blank" rel="noreferrer">Instagram</a>
-            <a href="https://www.facebook.com/Snaykaa/" target="_blank" rel="noreferrer">Facebook</a>
-            <a href="https://www.youtube.com/@Snaykaa" target="_blank" rel="noreferrer">YouTube</a>
-            <a href="/privacy">Privacy</a>
+          <div className="hero-art">
+            <img src="/hero.jpg" alt="SNAYKAA product hero" />
           </div>
         </div>
-      </footer>
+      </section>
+
+      <section className="benefits">
+        <div className="container grid-3">
+          <div className="card">
+            <h3>Firm + Smooth</h3>
+            <p>Peptides support collagen for lifted, resilient skin.</p>
+          </div>
+          <div className="card">
+            <h3>Bright + Even</h3>
+            <p>Niacinamide + acids help fade dark spots and refine tone.</p>
+          </div>
+          <div className="card">
+            <h3>Deep Hydration</h3>
+            <p>Hyaluronic Acid delivers plush, lasting moisture.</p>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
+
