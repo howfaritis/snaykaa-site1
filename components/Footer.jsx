@@ -1,23 +1,29 @@
-// components/Footer.jsx
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="site-footer">
       <div className="footer-inner">
-        <p className="footer-left">
-          © {new Date().getFullYear()} SNAYKAA · <strong>ABSURDLY SHAMELESS</strong>
-        </p>
+        <div className="foot-left">
+          <p>© {new Date().getFullYear()} <strong>SNAYKAA</strong> · ABSURDLY SHAMELESS</p>
+        </div>
 
-        <p className="footer-right">
-          <a href="mailto:snaykaabrand@gmail.com">snaykaabrand@gmail.com</a>
+        <div className="foot-mid">
+          <a className="foot-link" href="mailto:snaykaabrand@gmail.com">snaykaabrand@gmail.com</a>
           <span className="dot">•</span>
-          <a href="https://www.tiktok.com/@snaykaa" target="_blank" rel="noopener noreferrer">TikTok</a>
+          <Link className="foot-link" href="/privacy">Privacy</Link>
           <span className="dot">•</span>
-          <a href="https://www.instagram.com/the_snaykaa/" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <span className="dot">•</span>
-          <a href="https://www.facebook.com/Snaykaa/" target="_blank" rel="noopener noreferrer">Facebook</a>
-          <span className="dot">•</span>
-          <a href="https://www.youtube.com/@Snaykaa" target="_blank" rel="noopener noreferrer">YouTube</a>
-        </p>
+          <Link className="foot-link" href="/terms">Terms</Link>
+        </div>
+
+        <div className="foot-right">
+          <a className="icon-link" href="https://www.instagram.com/snaykaa" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+          <a className="icon-link" href="https://www.tiktok.com/@snaykaa" target="_blank" rel="noopener noreferrer" aria-label="TikTok">TikTok</a>
+          <a className="icon-link" href="https://www.facebook.com/snaykaa" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
+          <a className="icon-link" href="https://www.youtube.com/@snaykaa" target="_blank" rel="noopener noreferrer" aria-label="YouTube">YouTube</a>
+          <a className="icon-link" href="https://x.com/the_snaykaa" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">X</a>
+          <a className="icon-link" href="https://amazon.com/snaykaa" target="_blank" rel="noopener noreferrer" aria-label="Amazon">Amazon</a>
+        </div>
       </div>
     </footer>
   );
