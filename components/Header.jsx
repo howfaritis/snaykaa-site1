@@ -3,14 +3,10 @@ import Link from "next/link";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
-
-  // close the mobile menu on route change
   useEffect(() => {
-    const handler = () => setOpen(false);
-    if (typeof window !== "undefined") {
-      window.addEventListener("hashchange", handler);
-    }
-    return () => window.removeEventListener("hashchange", handler);
+    const close = () => setOpen(false);
+    if (typeof window !== "undefined") window.addEventListener("hashchange", close);
+    return () => window.removeEventListener("hashchange", close);
   }, []);
 
   return (
@@ -24,26 +20,26 @@ export default function Header() {
           </span>
         </Link>
 
-        {/* desktop nav */}
-        <nav className={`nav ${open ? "open" : ""}`} aria-label="Main">
+        <button
+          className="menu-button"
+          aria-label="Toggle navigation"
+          aria-controls="primary-nav"
+          aria-expanded={open ? "true" : "false"}
+          onClick={() => setOpen(!open)}
+        >
+          <span className="menu-icon" />
+        </button>
+
+        <nav id="primary-nav" className={`nav ${open ? "open" : ""}`} aria-label="Primary">
           <Link className="nav-link" href="/">Home</Link>
           <Link className="nav-link" href="/shop">Shop</Link>
           <Link className="nav-link" href="/about">About</Link>
           <Link className="nav-link" href="/blog">Blog</Link>
           <Link className="nav-link btn" href="/contact">Contact</Link>
         </nav>
-
-        {/* mobile button */}
-        <button
-          className="menu-button"
-          aria-label="Toggle menu"
-          aria-expanded={open ? "true" : "false"}
-          onClick={() => setOpen(!open)}
-        >
-          <span className="menu-icon" />
-        </button>
       </div>
     </header>
   );
 }
+
 
