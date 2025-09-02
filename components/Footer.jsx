@@ -1,17 +1,24 @@
-export default function Footer(){
+// components/Footer.jsx
+export default function Footer() {
   return (
-    <footer className="section" style={{borderTop:"1px solid var(--border)"}}>
-      <div className="container" style={{display:"flex",justifyContent:"space-between",flexWrap:"wrap",gap:16}}>
-        <p style={{margin:0}}>© {new Date().getFullYear()} SNAYKAA · ABSURDLY SHAMELESS</p>
-        <p style={{margin:0}}>
-          <a href="https://www.tiktok.com/@snaykaa" target="_blank" rel="noopener">TikTok</a> ·
-          <a href="https://www.instagram.com/the_snaykaa/" target="_blank" rel="noopener"> Instagram</a> ·
-          <a href="https://www.facebook.com/Snaykaa/" target="_blank" rel="noopener"> Facebook</a> ·
-          <a href="https://www.youtube.com/@Snaykaa" target="_blank" rel="noopener"> YouTube</a> ·
-          <a href="mailto:naykaabrand@gmail.com"> naykaabrand@gmail.com</a>
+    <footer className="site-footer">
+      <div className="footer-inner">
+        <p className="footer-left">
+          © {new Date().getFullYear()} SNAYKAA · <strong>ABSURDLY SHAMELESS</strong>
+        </p>
+
+        <p className="footer-right">
+          <a href="mailto:snaykaabrand@gmail.com">snaykaabrand@gmail.com</a>
+          <span className="dot">•</span>
+          <a href="https://www.tiktok.com/@snaykaa" target="_blank" rel="noopener noreferrer">TikTok</a>
+          <span className="dot">•</span>
+          <a href="https://www.instagram.com/the_snaykaa/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <span className="dot">•</span>
+          <a href="https://www.facebook.com/Snaykaa/" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <span className="dot">•</span>
+          <a href="https://www.youtube.com/@Snaykaa" target="_blank" rel="noopener noreferrer">YouTube</a>
         </p>
       </div>
     </footer>
   );
 }
-
