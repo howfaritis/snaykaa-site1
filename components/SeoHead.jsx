@@ -1,3 +1,11 @@
+import SeoHead from "../components/SeoHead";
+// ...
+<SeoHead
+  title="Contact"
+  description="Contact SNAYKAA — luxury skincare support, partnerships, and press."
+  keywords={["Snaykaa","luxury skincare","customer support","H2OSKIN","serum","cream"]}
+/>
+
 import Head from "next/head";
 import seo from "../data/seo.json";
 
