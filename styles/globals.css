@@ -176,3 +176,32 @@
 .footer-right a{ color:#3F2A56; text-decoration:none; font-weight:600; }
 .footer-right a:hover{ text-decoration:underline; }
 .footer-right .dot{ opacity:.4; }
+.contact-section {
+  margin: 1.5rem 0;
+}
+
+.contact-section h2 {
+  font-size: 1.25rem;
+  color: #3F2A56;
+  margin-bottom: 0.5rem;
+}
+
+a[href^="mailto:"],
+.social-links a {
+  color: #3F2A56;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+  color: #1B1430;
+}
+<a href="mailto:snaykaabrand@gmail.com">snaykaabrand@gmail.com</a>
