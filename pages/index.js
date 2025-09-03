@@ -73,5 +73,15 @@ export default function Hero() {
     </section>
   );
 }
+import Hero from "../components/Hero";
+
+export default function Home() {
+  return (
+    <>
+      <Hero />
+      {/* …the rest of your homepage sections… */}
+    </>
+  );
+}
 
 
