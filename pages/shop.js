@@ -25,7 +25,10 @@ export default function Shop() {
         <div className="product-grid">
           {/* Serum */}
           <div className="product-card">
-            <img src="/serum.jpg" alt="SNAYKAA Serum" className="product-img" />
+            <div className="product-gallery">
+              <img src="/serum.jpg" alt="SNAYKAA Serum" />
+              <img src="/serumbox.jpg" alt="SNAYKAA Serum Box" />
+            </div>
             <h2>SNAYKAA™ ALL-IN VENOM Face Serum</h2>
             <p>
               5-in-1 Multi-Benefit Serum — hydration, anti-aging, brightening,
@@ -43,7 +46,10 @@ export default function Shop() {
 
           {/* Cream */}
           <div className="product-card">
-            <img src="/cream.jpg" alt="SNAYKAA Cream" className="product-img" />
+            <div className="product-gallery">
+              <img src="/cream.jpg" alt="SNAYKAA Cream" />
+              <img src="/creambox.jpg" alt="SNAYKAA Cream Box" />
+            </div>
             <h2>SNAYKAA™ ALL-IN VENOM Face Cream H₂OSKIN</h2>
             <p>
               Luxury cream that hydrates, firms, smooths, brightens, and nourishes
@@ -63,4 +69,5 @@ export default function Shop() {
     </>
   );
 }
+
 
