@@ -1,48 +1,76 @@
-import Link from "next/link";
-import SeoHead from "../components/SeoHead";
+import { useState, useEffect } from "react";
 
-export default function Home() {
+export default function Hero() {
+  // your uploaded images inside /public
+  const images = ["/cream.jpg", "/creambox.jpg", "/serum.jpg", "/serumbox.jpg"];
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % images.length);
+    }, 4000); // change every 4s
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <>
-      <SeoHead
-        title="Luxury Skincare, Simplified"
-        description="Two products. Endless compliments. All-In Venom 5-in-1 Serum & H₂OSKIN Cream deliver firming, brightening, hydrating results without a 10-step routine."
-        image="/hero.jpg"
-        keywords={["Snaykaa","H2OSKIN","peptides","niacinamide","serum","cream","luxury skincare"]}
-      />
-
-      <section className="hero">
-        <div className="hero-inner">
-          <div className="hero-copy">
-            <h1>Luxury skincare for the fearless.</h1>
-            <p>Meet <strong>All-In Venom 5-in-1 Serum</strong> and <strong>H₂OSKIN Face Cream</strong> — visible results in one step.</p>
-            <div className="cta-row">
-              <Link className="btn btn-primary" href="/shop">Shop on Amazon</Link>
-              <Link className="btn btn-outline" href="/about">About Us</Link>
-            </div>
-          </div>
-          <div className="hero-art">
-            <img src="/hero.jpg" alt="SNAYKAA products" />
-          </div>
+    <section
+      className="hero"
+      style={{
+        backgroundImage: `url(${images[index]})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        minHeight: "600px",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        textAlign: "center",
+        color: "#fff",
+        textShadow: "0px 2px 6px rgba(0,0,0,0.7)",
+        transition: "background-image 1s ease-in-out"
+      }}
+    >
+      <div>
+        <h1 style={{ fontSize: "2.5rem", fontWeight: "bold" }}>
+          Luxury skincare for the fearless.
+        </h1>
+        <p style={{ fontSize: "1.2rem", marginTop: "1rem" }}>
+          Meet <strong>All-In Venom Serum</strong> & <strong>H₂OSKIN Cream</strong> — visible results in one step.
+        </p>
+        <div style={{ marginTop: "2rem" }}>
+          <a
+            href="https://amazon.com/snaykaa"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              background: "#3F2A56",
+              color: "#E9E5D3",
+              padding: "0.75rem 1.5rem",
+              borderRadius: "50px",
+              fontWeight: "bold",
+              textDecoration: "none",
+              marginRight: "1rem"
+            }}
+          >
+            Shop on Amazon
+          </a>
+          <a
+            href="/about"
+            style={{
+              border: "2px solid #3F2A56",
+              padding: "0.75rem 1.5rem",
+              borderRadius: "50px",
+              fontWeight: "bold",
+              textDecoration: "none",
+              color: "#3F2A56",
+              background: "#E9E5D3"
+            }}
+          >
+            About Us
+          </a>
         </div>
-      </section>
-
-      <section className="benefits">
-        <div className="container grid-3">
-          <div className="card"><h3>Firm + Smooth</h3><p>Peptides support collagen for lifted, resilient skin.</p></div>
-          <div className="card"><h3>Bright + Even</h3><p>Niacinamide & gentle acids refine tone and clarity.</p></div>
-          <div className="card"><h3>Deep Hydration</h3><p>Hyaluronic Acid delivers plush, lasting moisture.</p></div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container">
-          <h2>From the Blog</h2>
-          <p>Guides and ingredient deep-dives from SNAYKAA.</p>
-          <Link className="btn btn-outline" href="/blog">Read the Blog</Link>
-        </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
 
