@@ -48,3 +48,19 @@
   }
 ]
 
+[
+  {
+    "slug": "all-in-venom-serum",
+    "name": "SNAYKAA™ ALL-IN VENOM Face Serum – 5-in-1",
+    "price": 45,
+    "image": "/serum.jpg",
+    "buyUrl": "https://www.amazon.com/dp/B0FN4W9K6F"
+  },
+  {
+    "slug": "h2oskin-cream",
+    "name": "SNAYKAA™ ALL-IN VENOM Face Cream H₂OSKIN",
+    "price": 48,
+    "image": "/cream.jpg",
+    "buyUrl": "https://www.amazon.com/dp/B0FMZZPP8W"
+  }
+]
