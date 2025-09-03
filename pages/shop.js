@@ -70,4 +70,8 @@ export default function Shop() {
   );
 }
 
+import Image from "next/image";
+
+<Image src="/serum.jpg" alt="SNAYKAA Serum" width={640} height={800} priority />
+<Image src="/cream.jpg" alt="SNAYKAA Cream" width={640} height={800} />
 
