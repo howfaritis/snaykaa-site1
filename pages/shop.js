@@ -1,4 +1,8 @@
+// pages/shop.js
+import Image from "next/image";
+import Link from "next/link";
 import SeoHead from "../components/SeoHead";
+import products from "../data/products.json";
 
 export default function Shop() {
   return (
@@ -14,64 +18,82 @@ export default function Shop() {
           "face cream",
           "anti-aging",
           "hydration",
-          "brightening"
+          "brightening",
         ]}
       />
 
-      <main className="shop-page">
+      <main className="container shop">
         <h1 className="shop-title">Shop SNAYKAA™</h1>
         <p className="shop-sub">Luxury skincare designed to simplify your routine.</p>
 
-        <div className="product-grid">
-          {/* Serum */}
-          <div className="product-card">
-            <div className="product-gallery">
-              <img src="/serum.jpg" alt="SNAYKAA Serum" />
-              <img src="/serumbox.jpg" alt="SNAYKAA Serum Box" />
-            </div>
-            <h2>SNAYKAA™ ALL-IN VENOM Face Serum</h2>
-            <p>
-              5-in-1 Multi-Benefit Serum — hydration, anti-aging, brightening,
-              firming & nourishment.
-            </p>
-            <a
-              href="https://www.amazon.com/snaykaa"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-solid"
-            >
-              Buy on Amazon
-            </a>
-          </div>
+        <div className="grid">
+          {products.map((p) => (
+            <article key={p.slug} className="card">
+              <div className="thumb">
+                <Image
+                  src={`${p.image}?v=2`} // cache-bust new uploads
+                  alt={p.name}
+                  width={700}
+                  height={800}
+                  sizes="(max-width: 768px) 100vw, 420px"
+                  priority={p.slug === "all-in-venom-serum"}
+                />
+              </div>
 
-          {/* Cream */}
-          <div className="product-card">
-            <div className="product-gallery">
-              <img src="/cream.jpg" alt="SNAYKAA Cream" />
-              <img src="/creambox.jpg" alt="SNAYKAA Cream Box" />
-            </div>
-            <h2>SNAYKAA™ ALL-IN VENOM Face Cream H₂OSKIN</h2>
-            <p>
-              Luxury cream that hydrates, firms, smooths, brightens, and nourishes
-              — all in one.
-            </p>
-            <a
-              href="https://www.amazon.com/snaykaa"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-solid"
-            >
-              Buy on Amazon
-            </a>
-          </div>
+              <h2>{p.name}</h2>
+              {p.price && <p className="price">${p.price}</p>}
+
+              <div className="actions">
+                <Link
+                  href={p.buyUrl}
+                  className="btn btn-solid"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Buy on Amazon
+                </Link>
+                <Link href={`/product/${p.slug}`} className="btn btn-outline">
+                  Details
+                </Link>
+              </div>
+            </article>
+          ))}
         </div>
       </main>
+
+      <style jsx>{`
+        .grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 24px;
+          margin-top: 2rem;
+        }
+        .card {
+          border: 2px solid #3F2A56;
+          border-radius: 18px;
+          background: #E9E5D3;
+          padding: 16px;
+          text-align: center;
+        }
+        .thumb {
+          margin-bottom: 12px;
+        }
+        .shop-title {
+          color: #3F2A56;
+          font-weight: 800;
+        }
+        .price {
+          color: #3F2A56;
+          font-weight: 700;
+          margin: 6px 0 12px;
+        }
+        .actions {
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+          flex-wrap: wrap;
+        }
+      `}</style>
     </>
   );
 }
-
-import Image from "next/image";
-
-<Image src="/serum.jpg" alt="SNAYKAA Serum" width={640} height={800} priority />
-<Image src="/cream.jpg" alt="SNAYKAA Cream" width={640} height={800} />
-
