@@ -194,7 +194,7 @@ a:hover{text-decoration:underline}
 }
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
@@ -204,11 +204,19 @@ a:hover{text-decoration:underline}
   padding: 1.5rem;
   background: #fff;
 }
-.product-img {
-  max-width: 100%;
+.product-gallery {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.product-gallery img {
+  max-width: 140px;
   height: auto;
   border-radius: 12px;
-  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 4px;
 }
 .product-card h2 {
   font-size: 1.4rem;
