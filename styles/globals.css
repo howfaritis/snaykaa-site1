@@ -106,3 +106,75 @@ a:hover{text-decoration:underline}
 .prose h1,h2,h3{ color:var(--ink); margin-top:1.25rem }
 .prose ul{ padding-left:1.2rem }
 
+/* ====== HERO ====== */
+.hero {
+  background: #E9E5D3; /* brand parchment */
+  border-bottom: 2px solid #3F2A56;
+}
+.hero-copy { padding-left: clamp(8px, 3vw, 24px); }
+.hero-title {
+  color: #3F2A56;
+  font-size: clamp(28px, 4.2vw, 52px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: 0.2px;
+}
+.hero-sub {
+  margin-top: 10px;
+  max-width: 44ch;
+  color: #41364f;
+  font-size: clamp(15px, 1.6vw, 18px);
+}
+
+/* buttons — scoped so they don't affect header/contact */
+.hero .btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 12px 20px; border-radius: 999px; font-weight: 700;
+  text-decoration: none; border: 2px solid #3F2A56; transition: .2s ease;
+}
+.hero .btn-solid { background: #3F2A56; color: #E9E5D3; margin-right: 12px; }
+.hero .btn-solid:hover { background:#2A1D3F; }
+.hero .btn-outline { color:#3F2A56; background:#E9E5D3; }
+.hero .btn-outline:hover { background:#d8d2bf; }
+
+/* Rotator frame */
+.hero-rotator {
+  position: relative; min-height: 520px; border: 2px solid #3F2A56;
+  border-radius: 18px; overflow: hidden; background: #fff;
+}
+.hero-bg {
+  position: absolute; inset: 0; background-size: cover;
+  background-position: center; transition: background-image 700ms ease-in-out;
+  filter: saturate(105%);
+}
+
+/* arrows */
+.hero-arrow {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 42px; height: 42px; border-radius: 50%;
+  border: 2px solid #3F2A56; background: rgba(233,229,211,0.9);
+  color: #3F2A56; font-size: 28px; line-height: 0;
+  display: grid; place-items: center; cursor: pointer;
+}
+.hero-arrow:hover { background:#E9E5D3; }
+.hero-arrow.left { left: 10px; }
+.hero-arrow.right { right: 10px; }
+
+/* dots */
+.hero-dots {
+  position: absolute; left: 0; right: 0; bottom: 12px;
+  display: flex; gap: 8px; justify-content: center;
+}
+.hero-dots .dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  border: 2px solid #3F2A56; background: #E9E5D3;
+  opacity: .7; cursor: pointer; transition: .2s;
+}
+.hero-dots .dot:hover { opacity: 1; }
+.hero-dots .dot.active { background:#3F2A56; }
+
+/* Responsive */
+@media (max-width: 980px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-rotator { order: -1; min-height: 380px; }
+}
